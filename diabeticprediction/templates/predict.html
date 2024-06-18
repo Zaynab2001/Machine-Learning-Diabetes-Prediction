@@ -1,0 +1,107 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <style>
+        body {
+            background-size: cover;
+            background-image: url("{% static 'DiabetesPrediction/images/okkk.jpg' %}");
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            margin-left: 100px;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .main {
+            width: 550px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 1%;
+            margin-left: 50px; /* Ajout de cette ligne pour décaler le formulaire vers la gauche */
+        }
+
+        h1 {
+            color: #0086b3;
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center; /* Centrer le titre */
+        }
+
+        table {
+            width: 100%; /* Ajuster la largeur de la table */
+        }
+
+        tr {
+            margin-bottom: 10px; /* Ajouter un espacement vertical entre chaque ligne */
+        }
+
+        input[type=text] {
+            width: 100%; /* Ajuster la largeur de l'entrée */
+            padding: 8px; /* Ajouter un remplissage à l'entrée */
+            box-sizing: border-box; /* Inclure la largeur du remplissage dans la largeur totale */
+        }
+
+        input[type=submit] {
+            background-color: blue;
+            border: 2px;
+            color: white;
+            padding: 8px 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%; /* Ajuster la largeur du bouton */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Entrer les informations si dessous</h1>
+        <form action="result">
+            <table>
+                <tr>
+                    <td align="right">Grossesses:</td>
+                    <td align="left"><input type="text" name="n1"></td>
+
+                </tr>
+                <tr>
+                    <td align="right">Glucose:</td>
+                    <td align="left"><input type="text" name="n2"></td>
+                </tr>
+                <tr>
+                    <td align="right">Pression Sanguine:</td>
+                    <td align="left"><input type="text" name="n3"></td>
+                </tr>
+                <tr>
+                    <td align="right">Epaisseur de Peau:</td>
+                    <td align="left"><input type="text" name="n4"></td>
+                </tr>
+                <tr>
+                    <td align="right">Insuline:</td>
+                    <td align="left"><input type="text" name="n5"></td>
+                </tr>
+                <tr>
+                    <td align="right">Indice de Masse Corporelle (BMI):</td>
+                    <td align="left"><input type="text" name="n6"></td>
+                </tr>
+                <tr>
+                    <td align="right">Fonction de l'Héritage du Diabète:</td>
+                    <td align="left"><input type="text" name="n7"></td>
+                </tr>
+                <tr>
+                    <td align="right">Age:</td>
+                    <td align="left"><input type="text" name="n8"></td>
+                </tr>
+            </table>
+            <input type="submit">
+        </form>
+
+        <p align='center'>Resultat:{{result2}}</p>
+    </div>
+</body>
+</html>
